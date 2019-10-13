@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #fff;
+}
+
+body {
+    background: #000;
+}
+
+#password-entry {
+    padding: 30px;
+}
+
+#password-entry input {
+    background: #222;
+    border: none;
+    padding: 10px;
+    font-size: 40px;
+}
+
+#password-entry button {
+    background: #000;
+    border: solid 2px #ddd;
+    color: #ddd;
+    padding: 8px 20px;
+    font-size: 40px;
+}
+
+#colored-box {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
