@@ -15,7 +15,7 @@ startButton.onclick = function () {
     password = password.replace("9", "G");
     password = password.replace("0", "O");
     if (password.length > 0) {
-        key = base32tohex(password);
+        key = leftpad(base32tohex(password), 16, '0');
         passwordEntryDiv.style = "display:none";
         coloredBoxDiv.style = "display:block";
         setInterval(generateOtpAndShowColor, 50);
@@ -30,7 +30,7 @@ function generateOtpAndShowColor() {
     var time = leftpad(dec2hex(Math.floor(epoch / 5)), 16, '0');
 
     var shaObj = new jsSHA("SHA-1", "HEX");
-    shaObj.setHMACKey(time, "HEX");
+    shaObj.setHMACKey(key, "HEX");
     shaObj.update(time);
     var hmac = shaObj.getHMAC("HEX");
 
